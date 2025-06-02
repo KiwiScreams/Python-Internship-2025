@@ -1,5 +1,6 @@
 from src.ext import db
-class Tour(db.Model):
+from src.models.base import BaseModel
+class Tour(BaseModel):
     __tablename__ = "tours"
     id = db.Column(db.Integer, primary_key=True)
     country = db.Column(db.String)
